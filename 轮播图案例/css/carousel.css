@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+.box {
+    width: 430px;
+    margin: 100px auto;
+    position: relative;
+    height: 271px;
+    overflow: hidden;
+}
+
+.arrow_l,
+.arrow_r {
+    display: none;
+    position: absolute;
+    top: 50%;
+    /* left: 0; */
+    transform: translateY(-50%);
+    width: 20px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, .4);
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+.arrow_r {
+    right: 0;
+}
+
+.arrow_l:hover,
+.arrow_r:hover {
+    background-color: rgba(0, 0, 0, .8);
+}
+
+/* 把ul盒子加长，以便于图片能一排显示 */
+.box ul {
+    width: 600%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* 图片一排显示 */
+.box ul li {
+    float: left;
+}
+
+.box ul img {
+    width: 430px;
+}
+
+.circle {
+    position: absolute;
+    bottom: 6%;
+    left: 50%;
+    transform: translateX(-50%);
+    /* width: 150px; */
+    /* height: 20px; */
+    /* background-color: pink; */
+    /* display: table; */
+}
+
+.circle li {
+    float: left;
+    width: 8px;
+    height: 8px;
+    border: 2px solid rgba(255, 255, 255, .4);
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, .4);
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+/* .circle li:hover {
+    background-color: rgb(189, 187, 187);
+} */
+
+.circle .current {
+    background-color: #fff;
+}
